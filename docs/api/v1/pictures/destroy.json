@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "name": "Destroy Picture",
+  "end_point": "api/v1/picture/:uuid",
+  "http_method": "DELETE",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "response": {
+      "msg": "Picture 60ac72 has been destroyed",
+      "status": 200
+    }
+  }]
+}
