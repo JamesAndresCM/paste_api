@@ -1,0 +1,33 @@
+{
+  "published": true,
+  "name": "Create Picture",
+  "end_point": "api/v1/picture",
+  "http_method": "POST",
+  "params": [{
+    "key": "img[title]",
+    "type": "String",
+    "description": "Base64 img",
+    "required": true
+  }],
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "request": {
+      "picture": {
+        "img":"data:image/png;base64, /9j/4AAQSkZJRgABAQAAAQABAA..."
+      }
+    },
+    "response": {
+      "data": {
+        "img": {
+            "url": "http://localhost:3000/uploads/picture/img/18/9af54290-c1c5-4d4e-bc3a-15f8f04d5a1a.png"
+        },
+        "uuid": "60ac72",
+        "created_at": "2018-12-17T07:03:02.127Z"
+    },
+    "msg": "Picture has been created",
+    "status": 200
+    }
+  }]
+}

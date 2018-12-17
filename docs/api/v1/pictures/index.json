@@ -1,0 +1,30 @@
+{
+  "published": true,
+  "name": "Index Pictures",
+  "sort_order": 1,
+  "end_point": "api/v1/pictures or api/v1/pictures?page=number",
+  "http_method": "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "response": {
+      "data": [
+        {
+            "img": {
+                "url": "http://localhost:3000/uploads/picture/img/19/7fe38c7d-4022-462f-a7d8-f28f32a06daa.png"
+            },
+            "uuid": "726d83",
+            "created_at": "2018-12-17T06:50:59.279Z"
+        },
+        {
+            "img": {
+                "url": "http://localhost:3000/uploads/picture/img/17/d5fb2272-8fa0-4a5a-80a6-159adc9345d6.png"
+            },
+            "uuid": "7a9ae8",
+            "created_at": "2018-12-17T06:31:39.771Z"
+        }
+      ]
+    }
+  }]
+}
