@@ -1,0 +1,21 @@
+{
+  "published": true,
+  "name": "Private Paste Paste",
+  "end_point": "api/v1/private_paste?id=paste_id&private_uuid=private_uuid",
+  "http_method": "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "response": {
+    "data": {
+        "id": 31,
+        "private_uuid": "793cd4ae-bfbb-4ec4-9488-3b11b6f57301",
+        "content": "test",
+        "title": "Ruby is awesome",
+        "created_at": "2018-12-17T02:03:38.219Z"
+    },
+    "status": 200
+    }
+  }]
+}

@@ -1,0 +1,66 @@
+{
+  "published": true,
+  "name": "Create Paste",
+  "sort_order": 1,
+  "end_point": "api/v1/paste",
+  "http_method": "POST",
+  "params": [{
+    "key": "paste[title]",
+    "type": "String",
+    "description": "Paste title"
+  },{
+    "key": "paste[content]",
+    "type": "String",
+    "required": true,
+    "description": "Paste content"
+  },{
+    "key": "paste[exposure]",
+    "type": "String",
+    "description": "Exposure visibility",
+    "validations": ["private or public"]
+  }],
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "request": {
+      "paste": {
+        "title": "Public test",
+        "content": "this is a public test."
+      }
+    },
+    "response": {
+      "data": {
+        "uuid": "d339a0bf-6843-43e9-aaca-529468256eeb",
+        "content": "this is a public test.",
+        "title": "Public test",
+        "exposure": "public",
+        "created_at": "2018-12-17T02:13:35.493Z"
+    },
+    "msg": "Paste has been created",
+    "status": 201
+    }
+  },
+  {
+    "request": {
+      "paste": {
+        "title": "Ruby is awesome",
+        "content": "this is a private test.",
+        "exposure": "private"
+      }
+    },
+    "response": {
+      "data": {
+        "id": 31,
+        "private_uuid": "793cd4ae-bfbb-4ec4-9488-3b11b6f57301",
+        "content": "this is a private test.",
+        "title": "Ruby is awesome",
+        "exposure": "private",
+        "created_at": "2018-12-17T02:03:38.219Z"
+    },
+    "msg": "Paste has been created",
+    "status": 201
+    }
+  }
+]
+}

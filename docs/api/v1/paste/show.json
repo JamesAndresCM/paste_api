@@ -1,0 +1,21 @@
+{
+  "published": true,
+  "name": "Show Paste",
+  "end_point": "api/v1/paste/:uuid",
+  "http_method": "GET",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "response": {
+    "data": {
+        "uuid": "2269d0ff-5082-47b5-a876-fab762a793fc",
+        "content": "paste is up",
+        "title": "public paste",
+        "exposure": "public",
+        "created_at": "2018-12-16T23:09:12.581Z"
+    },
+    "status": 200
+    }
+  }]
+}

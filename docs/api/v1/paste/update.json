@@ -1,0 +1,48 @@
+{
+  "published": true,
+  "name": "Update Paste",
+  "end_point": "api/v1/paste/:uuid or :private_uuid",
+  "http_method": "PUT|PATCH",
+  "params": [
+    {
+    "key": "paste[title]",
+    "type": "String",
+    "description": "Paste title"
+    },{
+    "key": "paste[content]",
+    "type": "String",
+    "required": true,
+    "description": "Paste content"
+    },{
+    "key": "paste[exposure]",
+    "type": "String",
+    "description": "Exposure visibility",
+    "validations": ["private or public"]
+  }
+  ],
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "request": {
+      "paste": {
+        "title": "update content",
+        "content": "update title",
+        "exposure": "private"
+      }
+    },
+    "response": {
+    "data": {
+        "id": 28,
+        "content": "update content",
+        "title": "update title",
+        "exposure": "private",
+        "private_uuid": "b29c7852-ba04-430a-ac55-9c87d512321f",
+        "created_at": "2018-12-17T01:09:31.012Z"
+    },
+    "msg": "Paste has been updated",
+    "status": 200
+    }
+  }
+  ]
+}

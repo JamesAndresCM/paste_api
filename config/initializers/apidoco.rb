@@ -1,0 +1,1 @@
+Apidoco.app_name = 'Paste Api'

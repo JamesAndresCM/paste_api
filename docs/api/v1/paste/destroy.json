@@ -1,0 +1,15 @@
+{
+  "published": true,
+  "name": "Destroy Paste",
+  "end_point": "api/v1/paste/:uuid or :private_uuid",
+  "http_method": "DELETE",
+  "header": {
+    "Content-Type": "application/json"
+  },
+  "examples": [{
+    "response": {
+      "msg": "Paste has been destroyed",
+      "status": 200
+    }
+  }]
+}
