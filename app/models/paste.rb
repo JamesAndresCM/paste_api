@@ -30,10 +30,10 @@ class Paste < ApplicationRecord
 
   def set_uuid_paste
     if self.exposure_public?
-      self.uuid ||= SecureRandom.uuid
+      self.uuid ||= SecureRandom.uuid.first(6)
       self.private_uuid = nil
     elsif self.exposure_private?
-      self.private_uuid ||= SecureRandom.uuid
+      self.private_uuid ||= SecureRandom.uuid.first(6)
       self.uuid = nil
     end
   end
