@@ -9,7 +9,7 @@
   "examples": [{
     "response": {
     "data": {
-        "uuid": "2269d0ff-5082-47b5-a876-fab762a793fc",
+        "uuid": "67afa1",
         "content": "paste is up",
         "title": "public paste",
         "exposure": "public",

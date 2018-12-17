@@ -31,7 +31,7 @@
     },
     "response": {
       "data": {
-        "uuid": "d339a0bf-6843-43e9-aaca-529468256eeb",
+        "uuid": "67afa1",
         "content": "this is a public test.",
         "title": "Public test",
         "exposure": "public",
@@ -52,7 +52,7 @@
     "response": {
       "data": {
         "id": 31,
-        "private_uuid": "793cd4ae-bfbb-4ec4-9488-3b11b6f57301",
+        "private_uuid": "97aga2",
         "content": "this is a private test.",
         "title": "Ruby is awesome",
         "exposure": "private",
