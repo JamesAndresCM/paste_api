@@ -14,7 +14,7 @@ class Paste < ApplicationRecord
   }
   
   scope :get_private_paste, ->(id,uuid) { 
-    find_by("pastes.id = ? AND pastes.private_uuid = ?", id, uuid)
+    where("pastes.id = ? AND pastes.private_uuid = ?", id, uuid)
     .as_json(except: [:updated_at,:exposure,:uuid]) 
   }
 
