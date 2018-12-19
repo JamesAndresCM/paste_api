@@ -14,7 +14,7 @@ class Api::V1::PasteController < ApplicationController
     if @paste.blank?
       render json: { msg: "Paste not found", status: 404}
     else
-      render json: { data: @paste, status: 200 }
+      render json: { data: @paste.shift, status: 200 }
     end
   end
 
