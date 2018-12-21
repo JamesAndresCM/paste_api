@@ -1,0 +1,10 @@
+<div *ngIf="paste?.private_uuid" class="container">
+  <h3>Private paste</h3>
+  <button (click)="onDeletePaste(paste.private_uuid)" type="button" style="margin: 4px" class="btn btn-sm btn-danger mt-2 mb-2">
+      Delete Paste
+    </button>
+  <h3 *ngIf="paste?.title" style="padding-top: 15px;" class="card-text">{{ paste?.title }}</h3>
+      <p>{{ paste?.content }}</p>
+      <p>Release: {{ paste?.created_at | date: 'dd/MM/yyyy' }}</p>
+</div>
+

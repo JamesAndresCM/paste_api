@@ -1,0 +1,10 @@
+<div *ngIf="paste?.uuid" class="container">
+   <button (click)="onDeletePaste(paste.uuid)" type="button" style="margin: 4px" class="btn btn-sm btn-danger mt-2 mb-2">
+      Delete Paste
+    </button>
+  <h3 *ngIf="paste?.title" style="padding-top: 15px;" class="card-text">
+    <inline-editor type="text" [(ngModel)]="paste.title" (onSave)="saveEditable($event,paste.uuid,'title')" size="50"></inline-editor>    
+  </h3>
+      <inline-editor type="textarea" empty="content is required" [(ngModel)]="paste.content" (onSave)="saveEditable($event,paste.uuid,'content')"  cols="100"></inline-editor>
+      <p>Release: {{ paste?.created_at | date: 'dd/MM/yyyy' }}</p>
+</div>
