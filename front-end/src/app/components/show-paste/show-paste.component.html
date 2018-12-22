@@ -1,10 +1,20 @@
 <div *ngIf="paste?.uuid" class="container">
-   <button (click)="onDeletePaste(paste.uuid)" type="button" style="margin: 4px" class="btn btn-sm btn-danger mt-2 mb-2">
-      Delete Paste
-    </button>
-  <h3 *ngIf="paste?.title" style="padding-top: 15px;" class="card-text">
-    <inline-editor type="text" [(ngModel)]="paste.title" (onSave)="saveEditable($event,paste.uuid,'title')" size="50"></inline-editor>    
+  <button (click)="onDeletePaste(paste.uuid)" type="button" style="margin: 4px" class="btn btn-sm btn-danger mt-2 mb-2">
+    Delete Paste
+  </button>
+  <p class="mt-2">Paste Date: {{ paste?.created_at | date: 'dd/MM/yyyy' }}</p>
+  <h5>Title (Edit in place)</h5>
+  <h3 *ngIf="paste?.title" class="card-text style-inline">
+    <inline-editor type="text" [(ngModel)]="paste.title" (onSave)="saveEditable($event,paste.uuid,'title')" size="50">
+    </inline-editor>    
   </h3>
-      <inline-editor type="textarea" empty="content is required" [(ngModel)]="paste.content" (onSave)="saveEditable($event,paste.uuid,'content')"  cols="100"></inline-editor>
-      <p>Release: {{ paste?.created_at | date: 'dd/MM/yyyy' }}</p>
+  <br>
+  <h5>Paste (Edit in place)</h5>
+  <inline-editor style="cursor: pointer;" type="textarea" empty="content is required" [(ngModel)]="paste.content" (onSave)="saveEditable($event,paste.uuid,'content')"  cols="100">
+  </inline-editor>
+  <br>
+  <h5>Paste Exposure (Edit in place)</h5>
+  <inline-editor type="select" class="style-inline" [(ngModel)]="paste.exposure" (onSave)="saveEditable($event,paste.uuid,'exposure')" [options]="exposureOptions"
+        value="valor">
+  </inline-editor>
 </div>
