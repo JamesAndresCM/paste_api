@@ -44,6 +44,8 @@ export class PasteService {
      this.paste = {paste: {content: value}}
     }else if(attribute == "title"){
       this.paste = {paste: {title: value}}
+    }else if(attribute == "exposure"){
+      this.paste = {paste: {exposure: value}}
     }
     return this.http.patch(this.url+'paste/' + uuid, this.paste, httpOptions);
   }
